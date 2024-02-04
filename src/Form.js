@@ -83,8 +83,9 @@ function Form({ setAccepted }) {
           Yes
         </button>
         <button
-          className="bg-gray-500 hover:bg-black text-white font-bold py-2 px-4 rounded transition-all duration-300 ease-in-out"
+          className="bg-gray-500 md:hover:bg-black text-white font-bold py-2 px-4 rounded transition-all duration-300 ease-in-out"
           onMouseEnter={handleNoHover}
+          onClick={handleNoHover}
           style={{
             position: isHovered ? "fixed" : "relative",
             top: position.y,
