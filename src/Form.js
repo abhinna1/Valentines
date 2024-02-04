@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 
-function Form() {
+function Form({setAccepted}) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   const previousPosition = useRef({ x: 0, y: 0 });
@@ -74,6 +74,7 @@ function Form() {
           onMouseEnter={() => {
             setIsYes(true);
           }}
+          onClick={()=>{setAccepted(true)}}
           ref={yesBtn}
           className="bg-red-400 hover:bg-pink-300 duration-150 text-white font-bold py-2 px-4 rounded"
         >

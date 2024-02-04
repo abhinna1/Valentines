@@ -1,10 +1,16 @@
 import "./static/css/tailwind.css";
 import Form from "./Form";
 import githubLogo from "./static/images/github.png";
+import Background from "./Background";
+import { useState } from "react";
 function App() {
+  const [accepted, setAccepted] = useState(false);
   return (
     <>
-      <Form></Form>
+      {accepted?<Background accepted={accepted}/>:<></>}
+      
+      
+      <Form setAccepted={setAccepted}></Form>
       <div className="watermark flex items-center justify-center fixed bottom-3 gap-x-2 left-1/2 transform -translate-x-1/2 text-center text-black text-[13px] font-semibold tracking-widest">
         <img src={githubLogo} alt="" className="w-5" />
         <a
