@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 
-function Form({setAccepted}) {
+function Form({ setAccepted }) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   const previousPosition = useRef({ x: 0, y: 0 });
@@ -52,8 +52,8 @@ function Form({setAccepted}) {
         className="text-3xl text-center"
         style={{ fontFamily: "Cedarville Cursive" }}
       >
-        Will You Be My{" "}
-        <span className="font-bold text-red-500">Valentine</span>?
+        Will You Be My <span className="font-bold text-red-500">Valentine</span>
+        ?
       </h1>
       {isYes ? (
         <img
@@ -63,7 +63,7 @@ function Form({setAccepted}) {
         />
       ) : (
         <img
-          src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXoxNzkyZ3NrZWpocnp6bDU1OGdxbGJsbnQ3Z2VqemduejlzZWE0bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2iRO0O63KvuXS/giphy.gif"
+          src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzJkbDcwM2h3aG80Y3JwMGt4N242MXV2NWNvNHh3cnRnaTVkazZ4NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KBJTs4GJiv6uS9biab/giphy.gif"
           alt=""
           className="w-[20rem] h-[15rem] object-cover"
         />
@@ -74,7 +74,9 @@ function Form({setAccepted}) {
           onMouseEnter={() => {
             setIsYes(true);
           }}
-          onClick={()=>{setAccepted(true)}}
+          onClick={() => {
+            setAccepted(true);
+          }}
           ref={yesBtn}
           className="bg-red-400 hover:bg-pink-300 duration-150 text-white font-bold py-2 px-4 rounded"
         >
