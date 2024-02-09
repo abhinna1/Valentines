@@ -4,16 +4,18 @@ import githubLogo from "./static/images/github.png";
 import Background from "./Background";
 import { useState, useEffect } from "react";
 import AcceptedPage from "./AcceptedPage";
-import ReactGA from "react-ga"
+import ReactGA from "react-ga";
 
 function App() {
   const [accepted, setAccepted] = useState(false);
   function App() {
     useEffect(() => {
-      ReactGA.initialize('G-1YQXLXYVNV'); // Replace with your actual ID
-    }, []); // Run once on component mount
-  
-    // ... rest of your App component
+      ReactGA.initialize("G-1YQXLXYVNV");
+      ReactGA.event({
+        category: 'Page visit',
+        action: 'User visited your page.'
+      });
+    }, []);
   }
   return (
     <>
